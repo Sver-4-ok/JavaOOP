@@ -3,8 +3,8 @@ package com.example.javaoop;
 import android.util.Log;
 
 public class Animal {
-    int numberOfLegs;
-    boolean isAlive;
+    protected int numberOfLegs = 4;
+    boolean isAlive = true;
 
     public String breathe(){
         //Log.i("breathe", "I can breathe");
