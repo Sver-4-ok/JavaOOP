@@ -3,8 +3,8 @@ package com.example.javaoop;
 import android.util.Log;
 
 public class Cat extends Animal{
-    private int age;
-    private String name;
+    protected int age;
+    protected String name;
     private String breed;
     private String color;
 
@@ -28,9 +28,13 @@ public class Cat extends Animal{
     }
 
     public void talk(){
+        /*
         Log.i("talk()", "Meow! My name is "
                 + this.name + ", and I'm " + this.age + " years old."
                 + "My breed is " + this.breed + " and color is " + this.color);
+        */
+        Log.i("talk()", "Meow! I'm cat. My name is "
+                + this.name + ", and I'm " + this.age + " years old.");
     }
 
     public void talk(int age){

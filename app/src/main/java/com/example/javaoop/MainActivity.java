@@ -16,21 +16,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Ненужный код:
-        /*
-        Cat murzik = new Cat(4,"Murza","turkish van","grey");
-        murzik.talk();
-        murzik.breathe();
-
-        Cat glasha = new Cat(1,"Glasha","Siamese","white",4);
-
-        Log.i("numberOfLegs", String.valueOf(glasha.numberOfLegs));
-        glasha.talk();
-         */
-
         Cat vaska = new Cat();
-        vaska.talk(3);
-        vaska.talk("MeeeeyAAAAow!!!");
+        vaska.talk();
+
+        Puma bagira = new Puma();
+        bagira.talk();
+
+        Cat puma = new Puma();
+        puma.talk();
+
+        Cat murzik = new Lion();
+        murzik.talk();
 
 
     }
