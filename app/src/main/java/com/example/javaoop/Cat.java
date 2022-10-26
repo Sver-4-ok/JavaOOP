@@ -28,9 +28,17 @@ public class Cat extends Animal{
     }
 
     public void talk(){
-        Log.d("talk()", "Meow! My name is "
+        Log.i("talk()", "Meow! My name is "
                 + this.name + ", and I'm " + this.age + " years old."
                 + "My breed is " + this.breed + " and color is " + this.color);
+    }
+
+    public void talk(int age){
+        Log.i("talk()", "Meow! I'm " + age + " years old.");
+    }
+
+    public void talk(String hello){
+        Log.i("talk()", "Meow! " + hello);
     }
 
     public void initFields(int a, String n){
