@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         myCat = new Cat();
         myCat.initFields(4,"Puma");
-        myCat.talk();
+        //myCat.talk(); //Надо делать отдельный конструктор
 
         Cat murzik = new Cat(4,"Murza","turkish van","grey");
         murzik.talk();
