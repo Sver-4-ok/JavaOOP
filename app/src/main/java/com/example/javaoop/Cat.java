@@ -8,6 +8,8 @@ public class Cat extends Animal{
     private String breed;
     private String color;
 
+    final static int numberOfLegs = 4;
+
     public Cat(){
         age = 2;
         name = "Vaska";
@@ -19,6 +21,8 @@ public class Cat extends Animal{
         this.breed = breed;
         this.color = color;
     }
+
+    /*
     public Cat(int age, String name, String breed, String color, int legs){
         this.age = age;
         this.name = name;
@@ -26,8 +30,9 @@ public class Cat extends Animal{
         this.color = color;
         numberOfLegs = legs;
     }
+    */
 
-    public void talk(){
+    public final void talk(){
         /*
         Log.i("talk()", "Meow! My name is "
                 + this.name + ", and I'm " + this.age + " years old."
@@ -43,6 +48,10 @@ public class Cat extends Animal{
 
     public void talk(String hello){
         Log.i("talk()", "Meow! " + hello);
+    }
+
+    public static final String whatCatsLike(){
+        return " I like playing, jumping and sometimes scratching";
     }
 
     public void initFields(int a, String n){
