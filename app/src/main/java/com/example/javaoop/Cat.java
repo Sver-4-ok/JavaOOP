@@ -8,9 +8,23 @@ public class Cat extends Animal{
     private String breed;
     private String color;
     final static int numberOfLegs = 4;
+    static int count;
 
     String helloText = "Not id";
     CatMood catMood;
+
+    static class CountResetter{
+
+        CountResetter(){
+            if(Cat.count > 5){
+                resetCounter();
+            }
+        }
+
+        void resetCounter(){
+            Cat.count = 0;
+        }
+    }
 
     private class CatMood{
         int levelOfMood;
@@ -50,6 +64,7 @@ public class Cat extends Animal{
                         + this.name + ", and I'm " + this.age + " years old.";
                 break;
         }
+        Cat.count++;
     }
 
     public Cat(int age, String name){
@@ -72,6 +87,8 @@ public class Cat extends Animal{
                         + this.name + ", and I'm " + this.age + " years old.";
                 break;
         }
+
+        Cat.count++;
     }
 
     public Cat(int age, String name, String breed, String color){
@@ -79,6 +96,8 @@ public class Cat extends Animal{
         this.name = name;
         this.breed = breed;
         this.color = color;
+
+        Cat.count++;
     }
 
 

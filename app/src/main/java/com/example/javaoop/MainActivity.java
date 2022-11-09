@@ -27,9 +27,16 @@ public class MainActivity extends AppCompatActivity {
         Cat cat3 = new Cat(8, "Murzik");
         cat3.talk();
 
-        //Теперь нельзя CatMood отдельно вызывать:
-        //Cat.CatMood catMood = new Cat().new CatMood();
-        //Log.i("levelOfMood", String.valueOf(catMood.levelOfMood));
+        Cat cat4 = new Cat();
+        Cat cat5 = new Cat();
+        Cat cat6 = new Cat();
+        Cat cat7 = new Cat();
+
+        Log.i("count", "" + Cat.count);
+
+        Cat.CountResetter countResetter = new Cat.CountResetter();
+
+        Log.i("count", "" + Cat.count);
 
     }
 
