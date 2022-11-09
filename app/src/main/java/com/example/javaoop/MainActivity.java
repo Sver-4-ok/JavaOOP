@@ -19,16 +19,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Cat cat1 = new Cat();
-        Log.i("numberOfLegs", "cat1 umber of legs "+ String.valueOf(cat1.numberOfLegs));
-        //Cat.numberOfLegs--;
-        Log.i("numberOfLegs", "cat1 umber of legs "+ String.valueOf(cat1.numberOfLegs));
+        cat1.talk();
 
-        Cat cat2 = new Cat();
-        Log.i("numberOfLegs", "cat1 umber of legs "+ String.valueOf(cat2.numberOfLegs));
+        Cat cat2 = new Cat(5, "Vaska");
+        cat2.talk();
 
-        Lion lion = new Lion();
-        lion.talk();
+        Cat cat3 = new Cat(8, "Murzik");
+        cat3.talk();
 
+        //Теперь нельзя CatMood отдельно вызывать:
+        //Cat.CatMood catMood = new Cat().new CatMood();
+        //Log.i("levelOfMood", String.valueOf(catMood.levelOfMood));
 
     }
 
