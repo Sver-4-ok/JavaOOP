@@ -3,14 +3,16 @@ package com.example.javaoop;
 import android.util.Log;
 
 public class Cat extends Animal{
+
     private int age;
     protected String name;
     private String breed;
     private String color;
     final static int numberOfLegs = 4;
-    static int count;
+    static int count = 0;
 
-    String helloText = "Not id";
+
+    String helloText = "NOT ID";
     CatMood catMood;
 
     static class CountResetter{
@@ -122,4 +124,32 @@ public class Cat extends Animal{
         this.age = a;
         this.name = n;
     }
+
+
+
+    public void catchMouse(int mouseWeight){
+
+        class Mouse{
+            String color;
+            int weight;
+
+            public Mouse(String color, int weight){
+                this.color = color;
+                this.weight = weight;
+            }
+
+            String mouseVoise(){
+                return "Pi-pi-pi";
+            }
+        }
+
+        Mouse mouse = new Mouse("White", mouseWeight);
+
+        if(mouseWeight <= 1){
+            Log.i("cat_say", "I will eat you! -" + mouse.mouseVoise());
+        } else  {
+            Log.i("cat_say","I afraid you");
+        }
+    }
+
 }
