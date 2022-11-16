@@ -104,7 +104,7 @@ public class Cat extends Animal{
 
 
 
-    public final void talk(){
+    public void talk(){
         Log.i("talk()",helloText);
     }
 
