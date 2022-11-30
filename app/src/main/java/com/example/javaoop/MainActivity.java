@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 
 //git hub token - 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
+
+//я специально не реализовал Printable в MainActivity
+//тк это слишком бессмысленно
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,7 +24,16 @@ public class MainActivity extends AppCompatActivity {
         Cat cat = new Lion();
         cat.talk();
 
+        Printable printable = new Puma();
+        printable.print();
+        ((Puma) printable).move();
 
+        printAnyObject(new Lion());
+
+    }
+
+    void printAnyObject(Printable printable){
+        printable.print();
     }
 
 }
