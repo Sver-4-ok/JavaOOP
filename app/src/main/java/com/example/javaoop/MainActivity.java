@@ -30,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
         printAnyObject(new Lion());
 
+        Movable.someMethod();
+
+        Puma puma = new Puma();
+
+        //Таким образом понятно что откуда идет
+        //а сократил я так из-за ограничения количества символов в теге
+        Log.i("s.o.m puma","" + puma.speedOfMoving);
+        Log.i("s.o.m (Puma) printable","" + ((Puma) printable).speedOfMoving);
+        Log.i("s.o.m Movable","" + Movable.speedOfMoving);
+
     }
 
     void printAnyObject(Printable printable){
